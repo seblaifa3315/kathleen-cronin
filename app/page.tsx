@@ -1,11 +1,15 @@
 import '../styles/globals.css';
 import ThemeToggleButton from '../components/ThemeToggleButton';
+import Navbar from '@/sections/Navbar';
+import Hero from '@/sections/Hero';
+import Book from '@/sections/Book';
 
 export default function Home() {
   return (
-    <div className='bg-background'>
-      <h1 className='text-foreground'>Welcome to the Home Page</h1>
-      <ThemeToggleButton />
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <Book />
+    </>
   );
 }

@@ -5,23 +5,112 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: var(--font-sans);
-  background-color: var(--background);
 }
 
 @layer base {
   :root {
-    --background: #000000;
-    --foreground: #ffffff;
+    --navbarBg: rgba(26, 22, 37, 0.95);
+    --navbarText: #e8d5e8;
+    --navbarTextHover: #c9a8b3; /* accent */
+    --navbarSecondary: var(--navbarText);
+    --navbarBorder: #374151;
+    --background1: #221e28;
+    --blob1: #4a2d5c;
+    --blob2: #c9a8b3; /* accent */
+    --accent: #c9a8b3; /* accent */
+    --title: #e8d5e8;
+    --text: #D1D5DB;
+    --divider: #c9a8b3; /* accent */
+    --button: #4a2d5c;
+    --buttonHover: #5d3a73;
+    --icon: #c9a8b3; /* accent */
+    --imageBorder: #c9a8b3; /* accent */
+    --imageGlow: #c9a8b3; /* accent */
+    --blob-gradient: linear-gradient(to bottom right,var(--blob1),var(--blob2));
+     --background-gradient: linear-gradient(
+      to bottom right,
+      #1a1625,
+      #2a2333,
+      #3a3045
+    );
+    --bookShadow1: #4a2d5c;
+    --bookShadow2: #c9a8b3; /* accent */
+    --bookShadow-gradient: linear-gradient(to bottom right,var(--bookShadow1),var(--bookShadow2));
+
+    --badgeBg: #2a2333;
+    --badgeText: #c9a8b3; /* accent */
+    --star: #c9a8b3; /* accent */
   }
 
   .light {
-    --background: #ffffff;
-    --foreground: #000000;
+    --navbarBg: rgba(250, 248, 251, 0.95);
+    --navbarText: #5d3a5f;
+    --navbarTextHover: #8b6b9c;
+    --navbarSecondary: var(--navbarText);
+    --navbarBorder: #e8dce8;
+    --background1: #fdfbfd;
+    --blob1: #8b6b9c;
+    --blob2: #d4b5c3;
+    --accent: #a67c94; /* accent */
+    --title: #5d3a5f;
+    --text: #374151;
+    --divider: #c9a8b3;
+    --button: #8b6b9c;
+    --buttonHover: #6d4a7d;
+    --icon: #8b6b9c;
+    --imageBorder: #8b6b9c;
+    --imageGlow: #8b6b9c;
+    --blob-gradient: linear-gradient(to bottom right,var(--blob1),var(--blob2));
+    --background-gradient: linear-gradient(
+      to bottom right,
+      #f8f4f9,
+      #f0e8f2,
+      #e8dce8
+    );
+    --bookShadow1: #8b6b9c;
+    --bookShadow2: #d4b5c3;
+    --bookShadow-gradient: linear-gradient(to bottom right,var(--bookShadow1),var(--bookShadow2));
+    --badgeBg: #f0e8f2;
+    --badgeText: #5d3a5f;
+    --star: #c9a8b3;
   }
 }
 
 @theme {
     --font-family-sans: var(--font-sans);
-    --color-background: var(--background);
+    --color-navbarBg: var(--navbarBg);
+    --color-navbarText: var(--navbarText);
+    --color-navbarTextHover: var(--navbarTextHover);
+    --color-navbarSecondary: var(--navbarSecondary);
+    --color-navbarBorder: var(--navbarBorder);
+    --color-background1: var(--background1);
     --color-foreground: var(--foreground);
+    --color-blob1: var(--blob1);
+    --color-blob2: var(--blob2);
+    --color-accent: var(--accent);
+    --color-title: var(--title);
+    --color-text: var(--text);
+    --color-divider: var(--divider);
+    --color-button: var(--button);
+    --color-buttonHover: var(--buttonHover);
+    --color-icon: var(--icon);
+    --color-imageBorder: var(--imageBorder);
+    --color-imageGlow: var(--imageGlow);
+    --color-badgeBg: var(--badgeBg);
+    --color-badgeText: var(--badgeText);
+    --color-star: var(--star);
+}
+
+@layer utilities {
+  .bg-blob {
+    background: var(--blob-gradient);
+  }
+  
+  .bg-page {
+    background: var(--background-gradient);
+  }
+
+  .bg-bookShadow{
+    background: var(--bookShadow-gradient);
+  }
 }
