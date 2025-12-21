@@ -33,17 +33,17 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? `bg-navbarBg backdrop-blur-md shadow-sm py-4` : "bg-transparent py-6"}`}>
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? `bg-bg2/90 backdrop-blur-md shadow-sm py-4` : "bg-transparent py-6"}`}>
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
                 <div className="flex items-center justify-between">
-                    <button onClick={() => scrollToSection("hero")} className={`text-2xl  font-serif font-light tracking-wide text-navbarText hover:text-navbarTextHover transition-colors cursor-pointer `}>
+                    <button onClick={() => scrollToSection("hero")} className={`text-2xl  font-serif font-light tracking-wide text-primary hover:text-accent1 transition-colors cursor-pointer `}>
                         {author.firstName} {author.lastName}
                     </button>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            <button key={link.id} onClick={() => scrollToSection(link.id)} className={`text-sm tracking-wider uppercase text-navbarSecondary hover:text-navbarTextHover transition-colors font-light cursor-pointer hover:scale-105`}>
+                            <button key={link.id} onClick={() => scrollToSection(link.id)} className={`text-sm tracking-wider uppercase text-secondary hover:text-accent1 transition-colors font-light cursor-pointer hover:scale-105`}>
                                 {link.name}
                             </button>
                         ))}
@@ -59,10 +59,10 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
-                    <div className={`md:hidden mt-6 pb-6 border-t border-navbarBorder pt-6 bg-navbarBg backdrop-blur-md`}>
+                    <div className={`md:hidden mt-6 pb-6 border-t border-bg3 pt-6 bg-navbar-bg backdrop-blur-md`}>
                         <div className="flex flex-col gap-4">
                             {navLinks.map((link) => (
-                                <button key={link.id} onClick={() => scrollToSection(link.id)} className={`text-sm tracking-wider uppercase text-navbarSecondary hover:text-navbarTextHover transition-colors font-light text-left cursor-pointer`}>
+                                <button key={link.id} onClick={() => scrollToSection(link.id)} className={`text-sm tracking-wider uppercase text-secondary hover:text-accent1 transition-colors font-light text-left cursor-pointer`}>
                                     {link.name}
                                 </button>
                             ))}

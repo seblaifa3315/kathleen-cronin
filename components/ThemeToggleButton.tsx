@@ -20,8 +20,8 @@ export default function ThemeToggleButton() {
       onClick={toggleTheme}
       className="
         p-2 rounded-lg
-        text-navbarSecondary
-        hover:text-navbarTextHover hover:scale-105
+        text-secondary
+        hover:text-accent1 hover:scale-105
         transition-colors
         cursor-pointer
       "

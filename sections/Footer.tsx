@@ -12,16 +12,16 @@ export default function Contact() {
     ];
 
     return (
-        <footer className="bg-footerBg text-white py-12 border-t border-footerBorder">
+        <footer className="text-white py-12 border-t border-secondary/20 bg-footer-bg">
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
                 <div className="grid md:grid-cols-3 gap-8 items-center">
                     {/* Brand */}
                     <div className="space-y-3">
                         <div className="flex items-center gap-2">
-                            <BookOpen size={24} className="text-footerIcon" />
+                            <BookOpen size={24} className="text-accent1" />
                             <h3 className="text-xl font-serif font-light">{author.firstName} {author.lastName}</h3>
                         </div>
-                        <p className="text-sm text-footerText font-light">Author of {book.title}</p>
+                        <p className="text-sm text-white/70 font-light">Author of {book.title}</p>
                     </div>
 
                     {/* Social Links */}
@@ -29,8 +29,8 @@ export default function Contact() {
                         {socialLinks.map((social) => {
                             const Icon = social.icon;
                             return (
-                                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="p-3 bg-footerIcon rounded-full transition-all duration-300 hover:scale-110">
-                                    <Icon size={24} />
+                                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 hover:scale-110">
+                                    <Icon size={20} />
                                 </a>
                             );
                         })}
@@ -38,8 +38,8 @@ export default function Contact() {
 
                     {/* Copyright */}
                     <div className="text-center md:text-right">
-                        <p className="text-sm text-footerText font-light">© {new Date().getFullYear()} {author.firstName} {author.lastName}</p>
-                        <p className="text-xs text-footerTextLight font-light mt-1">All rights reserved</p>
+                        <p className="text-sm text-white/70 font-light">© {new Date().getFullYear()} {author.firstName} {author.lastName}</p>
+                        <p className="text-xs text-white/50 font-light mt-1">All rights reserved</p>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ type StarRatingProps = {
 
 export function StarRating({ rating, max = 5 }: StarRatingProps) {
   return (
-    <div className="flex items-center gap-1 text-star">
+    <div className="flex items-center gap-1 accent1-star">
       {Array.from({ length: max }).map((_, i) => {
         const starValue = i + 1;
 
@@ -23,7 +23,7 @@ export function StarRating({ rating, max = 5 }: StarRatingProps) {
             <Star
               key={i}
               size={20}
-              className="text-star/30"
+              className="text-accent1/30"
             />
           );
         }
@@ -33,7 +33,7 @@ export function StarRating({ rating, max = 5 }: StarRatingProps) {
             {/* Empty star background */}
             <Star
               size={20}
-              className="absolute inset-0 text-star/30"
+              className="absolute inset-0 text-accent1/30"
             />
 
             {/* Filled portion */}
@@ -44,7 +44,7 @@ export function StarRating({ rating, max = 5 }: StarRatingProps) {
               <Star
                 size={20}
                 fill="currentColor"
-                className="text-star"
+                className="text-accent1"
               />
             </div>
           </div>
