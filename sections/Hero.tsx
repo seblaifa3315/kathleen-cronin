@@ -12,7 +12,7 @@ export default function Hero() {
     };
 
     return (
-        <section id="hero" className="bg-blue-500 min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-0">
+        <section id="hero" className="bg-hero-bg min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-0">
             {/* Background blobs */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl bg-accent1" />
