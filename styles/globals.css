@@ -8,86 +8,93 @@ body {
 }
 
 @layer base {
+    /* ==================================================
+       DARK MODE (default) — ink + gold
+    ================================================== */
     :root {
-        /* section's background */
-        --hero-bg: linear-gradient(to bottom right, var(--bg2), var(--bg1), var(--bg3));
-        --bg1: #221e28;
-        --bg2: #1a1625;
-        --bg3: #3a3045;
-        --bg4: #2a2333;
-        --input-bg: var(--bg4);
-        --footer-bg: #0f0b14;
+        /* Section backgrounds */
+        --hero-bg: linear-gradient(
+            to bottom right,
+            var(--bg2),
+            var(--bg1),
+            var(--bg3)
+        );
 
-        /* Multiple function */
-        --accent1: #c9a8b3;
-        --accent2: #4a2d5c;
-        --accent3: #5d3a73;
+        --bg1: #211c12; /* warm charcoal */
+        --bg2: #18140e; /* near-black amber */
+        --bg3: #3a2f1c; /* deep warm gold */
+        --bg4: #2b2416; /* elevated surface */
+        --input-bg: var(--bg4);
+        --footer-bg: #0f0b06;
+
+        /* Accents */
+        --accent1: #e6c77a; /* soft gold */
+        --accent2: #d4b35f; /* honey amber */
+        --accent3: #bfa24a; /* muted deep gold */
 
         /* Texts */
-        --primary: #e8d5e8;  /* navbar */
-        --secondary: #D1D5DB; /* navbar */
-
-
-        
+        --primary: #f2e6c9;   /* navbar / main text */
+        --secondary: #d1d5db; /* neutral gray */
     }
 
+    /* ==================================================
+       LIGHT MODE — parchment + gold ink
+    ================================================== */
     .light {
-        /* background */
-        --hero-bg: linear-gradient(to bottom right, var(--bg2), var(--bg1), var(--bg3));
-        --bg1: #fdfbfd;
-        --bg2: #f8f4f9;
-        --bg3: #e8dce8;
-        --bg4: #f0e8f2;
+        /* Section backgrounds */
+        --hero-bg: linear-gradient(
+            to bottom right,
+            var(--bg2),
+            var(--bg1),
+            var(--bg3)
+        );
+
+        --bg1: #fdfcf8; /* warm white */
+        --bg2: #faf6ec; /* parchment */
+        --bg3: #f1e3ba; /* soft golden wash */
+        --bg4: #fbf3dc; /* elevated card bg */
         --input-bg: var(--bg2);
         --footer-bg: var(--primary);
 
-        /* Multiple function */
-        --accent1: #a67c94;
-        --accent2: #8b6b9c;
-        --accent3: #6d4a7d;
-
+        /* Accents */
+        --accent1: #e6c77a; /* shared brand gold */
+        --accent2: #d4b35f;
+        --accent3: #bfa24a;
 
         /* Texts */
-        --primary: #5d3a5f;  /* navbar */
-        --secondary: #374151; /* navbar */
-
+        --primary: #6b5a2e;   /* warm brown */
+        --secondary: #374151; /* readable neutral */
     }
 }
 
+/* ==================================================
+   Tailwind Theme Tokens (v4)
+================================================== */
 @theme {
+    /* Backgrounds */
+    --color-bg1: var(--bg1);
+    --color-bg2: var(--bg2);
+    --color-bg3: var(--bg3);
+    --color-bg4: var(--bg4);
+    --color-input-bg: var(--input-bg);
+    --color-footer-bg: var(--footer-bg);
 
-  /* --------------------------------------------------
-    Backgrounds
-  -------------------------------------------------- */
-  --color-bg1: var(--bg1);
-  --color-bg2: var(--bg2);
-  --color-bg3: var(--bg3);
-  --color-bg4: var(--bg4);
-  --color-input-bg: var(--input-bg);
-  --color-footer-bg: var(--footer-bg);
+    /* Accents */
+    --color-accent1: var(--accent1);
+    --color-accent2: var(--accent2);
+    --color-accent3: var(--accent3);
 
-
-    /* --------------------------------------------------
-    Multiple functions
-  -------------------------------------------------- */
-  --color-accent1: var(--accent1);
-  --color-accent2: var(--accent2);
-  --color-accent3: var(--accent3);
-
-
-    /* --------------------------------------------------
-    Texts
-  -------------------------------------------------- */
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-
-
+    /* Texts */
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
 }
 
+/* ==================================================
+   Utilities
+================================================== */
 @layer utilities {
-  /* Hero Section Background*/
-  .bg-hero-bg {
-    background: var(--hero-bg);
-  }
-
+    /* Hero Section Background */
+    .bg-hero-bg {
+        background: var(--hero-bg);
+    }
 }
