@@ -50,7 +50,7 @@ export default function Hero() {
                 </div>
 
                 {/* Scroll indicator */}
-                <button onClick={scrollToBook} className="absolute bottom-12 left-1/2 -translate-x-1/2 text-accent1 animate-bounce cursor-pointer">
+                <button onClick={scrollToBook} className="absolute bottom-14 sm:bottom-16 md:bottom-12 lg:bottom-0 left-1/2 -translate-x-1/2 text-accent1 animate-bounce cursor-pointer">
                     <ChevronDown size={32} />
                 </button>
             </div>
